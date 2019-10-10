@@ -1,0 +1,168 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body * {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.carousel_title {
+  margin-top: 40px;
+}
+
+.image__clipper {
+  margin-top: 40px;
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background-color: rgb(185, 185, 185);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
+}
+.slider__imageContainer {
+  position: absolute;
+  background-color: rgb(185, 185, 185);
+  width: 700px;
+  height: 400px;
+
+  /* transition: right 0.4s; */
+}
+/* .slider__imageContainer:hover .slider__imageWrapper {
+  left: 0px;
+} */
+
+.slider__imageWrapper {
+  display: flex-column;
+  position: absolute;
+  display: none;
+  /* right: 100px; */
+  width: 700px;
+  height: 400px;
+  left: 0px;
+  transition: left 0.5s;
+
+  /* transition: right 0.3s; */
+}
+
+.next {
+  left: 100%;
+  display: block;
+}
+
+.previous {
+  left: -100%;
+  display: block;
+}
+
+.current {
+  left: 0px;
+  display: block;
+  z-index: 100;
+}
+
+.moveNext {
+  left: 0px;
+  display: block;
+}
+
+.moveCurrent {
+  left: -100%;
+  display: block;
+}
+.movePrevious {
+  left: 100%;
+  display: block;
+}
+.moveCurrent--previous {
+  left: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.slider__indicator {
+  margin: 10px;
+  cursor: pointer;
+}
+.indicator__dot {
+  width: 15px;
+  height: 15px;
+  border: solid 1px white;
+  border-radius: 50%;
+  background-color: grey;
+}
+
+.indicator__dot--active {
+  background-color: white;
+  border: solid 1px gray;
+}
+
+.slider__image {
+  height: 100%;
+  width: 100%;
+}
+.slideNumber {
+  text-align: center;
+}
+
+.button__container {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider__navIndicator {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  justify-content: space-around;
+}
+.button__arrowImage {
+  /* background-image: url("assets/arrow.svg");
+  background-size: 100%; */
+  width: 50px;
+  height: 50px;
+}
+
+.slider__nav {
+  background-image: url("assets/arrow-w.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  width: 100px;
+  height: 100px;
+  border-style: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.slider__nav:hover {
+  opacity: 1;
+  background-size: 105%;
+}
+.navButton__previous {
+  transform: rotate(90deg);
+}
+
+.navButton__next {
+  transform: rotate(-90deg);
+}
